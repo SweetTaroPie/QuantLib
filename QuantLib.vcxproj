@@ -679,13 +679,11 @@
     <ClInclude Include="ql\experimental\exoticoptions\everestoption.hpp" />
     <ClInclude Include="ql\experimental\exoticoptions\himalayaoption.hpp" />
     <ClInclude Include="ql\experimental\exoticoptions\holderextensibleoption.hpp" />
-    <ClInclude Include="ql\experimental\exoticoptions\kirkspreadoptionengine.hpp" />
     <ClInclude Include="ql\experimental\exoticoptions\mceverestengine.hpp" />
     <ClInclude Include="ql\experimental\exoticoptions\mchimalayaengine.hpp" />
     <ClInclude Include="ql\experimental\exoticoptions\mcpagodaengine.hpp" />
     <ClInclude Include="ql\experimental\exoticoptions\pagodaoption.hpp" />
     <ClInclude Include="ql\experimental\exoticoptions\partialtimebarrieroption.hpp" />
-    <ClInclude Include="ql\experimental\exoticoptions\spreadoption.hpp" />
     <ClInclude Include="ql\experimental\exoticoptions\twoassetbarrieroption.hpp" />
     <ClInclude Include="ql\experimental\exoticoptions\twoassetcorrelationoption.hpp" />
     <ClInclude Include="ql\experimental\exoticoptions\writerextensibleoption.hpp" />
@@ -2039,7 +2037,6 @@
     <ClCompile Include="ql\experimental\exoticoptions\everestoption.cpp" />
     <ClCompile Include="ql\experimental\exoticoptions\himalayaoption.cpp" />
     <ClCompile Include="ql\experimental\exoticoptions\holderextensibleoption.cpp" />
-    <ClCompile Include="ql\experimental\exoticoptions\kirkspreadoptionengine.cpp" />
     <ClCompile Include="ql\experimental\exoticoptions\mceverestengine.cpp" />
     <ClCompile Include="ql\experimental\exoticoptions\mchimalayaengine.cpp" />
     <ClCompile Include="ql\experimental\exoticoptions\mcpagodaengine.cpp" />
