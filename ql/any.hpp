@@ -36,7 +36,9 @@
 #include <boost/any.hpp>
 #endif
 
-namespace QuantLib::ext {
+namespace QuantLib {
+
+    namespace ext {
 
         #if defined(QL_USE_STD_ANY)
         using std::any;                   // NOLINT(misc-unused-using-decls)
@@ -47,5 +49,6 @@ namespace QuantLib::ext {
         #endif
 
     }
+}
 
 #endif

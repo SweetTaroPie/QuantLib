@@ -20,6 +20,7 @@
 /*! \file ql/functional.hpp
     \brief Maps function, bind and cref to either the boost or std implementation
 */
+///
 
 #ifndef quantlib_functional_hpp
 #define quantlib_functional_hpp
