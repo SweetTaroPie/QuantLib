@@ -30,11 +30,7 @@
 #include <ql/termstructures/defaulttermstructure.hpp>
 #include <ql/optional.hpp>
 
-#include <ql/event.hpp>
-#include <ql/math/comparison.hpp>
-#include <ql/optional.hpp>
-#include <ql/patterns/lazyobject.hpp>
-#include <vector>
+
 
 namespace QuantLib {
 
@@ -123,29 +119,30 @@ namespace QuantLib {
         const AccrualBias accrualBias_;
         const ForwardsInCouponPeriod forwardsInCouponPeriod_;
     };
-}
-
-class CashFlowTable {
 
 
-    public:
+    class CashFlowTable {
 
+
+      public:
         CashFlowTable() = default;
 
-    public:
-
+      public:
         std::vector<Date> paymentDates;
         std::vector<Date> accrualStartDates;
         std::vector<Date> accrualEndDates;
-        std::vector<Date> effectiveDates;
+        std::vector<Date> effectiveEndDate;
 
         std::vector<Real> amounts;
         std::vector<Real> accrualDefaultPV;
 
         std::vector<DiscountFactor> discounts;
         std::vector<DiscountFactor> survivalProbability;
-
     };
+
+
+}
+
 
 
 

@@ -47,6 +47,7 @@ namespace QuantLib {
 
         registerWith(probability_);
         registerWith(discountCurve_);
+
     }
 
     void IsdaCdsEngine::calculate() const {
