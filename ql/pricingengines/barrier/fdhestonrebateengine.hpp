@@ -30,7 +30,7 @@
 #include <ql/pricingengines/genericmodelengine.hpp>
 #include <ql/methods/finitedifferences/solvers/fdmhestonsolver.hpp>
 #include <ql/methods/finitedifferences/solvers/fdmbackwardsolver.hpp>
-#include <ql/instruments/barrieroption.hpp>
+#include <ql/instruments/barriers/barrieroption.hpp>
 #include <ql/termstructures/volatility/equityfx/localvoltermstructure.hpp>
 
 namespace QuantLib {

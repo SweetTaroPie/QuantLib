@@ -28,7 +28,7 @@
 
 #include <ql/processes/blackscholesprocess.hpp>
 #include <ql/methods/finitedifferences/solvers/fdmbackwardsolver.hpp>
-#include <ql/instruments/barrieroption.hpp>
+#include <ql/instruments/barriers/barrieroption.hpp>
 
 namespace QuantLib {
 

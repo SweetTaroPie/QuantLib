@@ -893,7 +893,10 @@
     <ClInclude Include="ql\instruments\asianoption.hpp" />
     <ClInclude Include="ql\instruments\assetswap.hpp" />
     <ClInclude Include="ql\instruments\averagetype.hpp" />
-    <ClInclude Include="ql\instruments\barrieroption.hpp" />
+    <ClInclude Include="ql\instruments\barriers\barrieroption.hpp" />
+    <ClInclude Include="ql\instruments\barriers\barriers.h" />
+    <ClInclude Include="ql\instruments\barriers\kikobarrier.h" />
+    <ClInclude Include="ql\instruments\barriers\kikooptions.h" />
     <ClInclude Include="ql\instruments\barriertype.hpp" />
     <ClInclude Include="ql\instruments\basketoption.hpp" />
     <ClInclude Include="ql\instruments\bmaswap.hpp" />
@@ -2164,7 +2167,10 @@
     <ClCompile Include="ql\instruments\asianoption.cpp" />
     <ClCompile Include="ql\instruments\assetswap.cpp" />
     <ClCompile Include="ql\instruments\averagetype.cpp" />
-    <ClCompile Include="ql\instruments\barrieroption.cpp" />
+    <ClCompile Include="ql\instruments\barriers\barrieroption.cpp" />
+    <ClCompile Include="ql\instruments\barriers\barriers.cpp" />
+    <ClCompile Include="ql\instruments\barriers\kikobarrier.cpp" />
+    <ClCompile Include="ql\instruments\barriers\kikooptions.cpp" />
     <ClCompile Include="ql\instruments\barriertype.cpp" />
     <ClCompile Include="ql\instruments\basketoption.cpp" />
     <ClCompile Include="ql\instruments\bmaswap.cpp" />

@@ -774,7 +774,7 @@
     <ClInclude Include="ql\instruments\averagetype.hpp">
       <Filter>instruments</Filter>
     </ClInclude>
-    <ClInclude Include="ql\instruments\barrieroption.hpp">
+    <ClInclude Include="ql\instruments\barriers\barrieroption.hpp">
       <Filter>instruments</Filter>
     </ClInclude>
     <ClInclude Include="ql\instruments\barriertype.hpp">
@@ -4443,6 +4443,9 @@
     <ClInclude Include="ql\pricingengines\basket\vectorbsmprocessextractor.hpp">
       <Filter>pricingengines\basket</Filter>
     </ClInclude>
+    <ClInclude Include="ql\instruments\barriers\kikobarrier.h" />
+    <ClInclude Include="ql\instruments\barriers\barriers.h" />
+    <ClInclude Include="ql\instruments\barriers\kikooptions.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ql\methods\montecarlo\brownianbridge.cpp">
@@ -4643,7 +4646,7 @@
     <ClCompile Include="ql\instruments\averagetype.cpp">
       <Filter>instruments</Filter>
     </ClCompile>
-    <ClCompile Include="ql\instruments\barrieroption.cpp">
+    <ClCompile Include="ql\instruments\barriers\barrieroption.cpp">
       <Filter>instruments</Filter>
     </ClCompile>
     <ClCompile Include="ql\instruments\barriertype.cpp">
@@ -7221,5 +7224,8 @@
     <ClCompile Include="ql\pricingengines\basket\vectorbsmprocessextractor.cpp">
       <Filter>pricingengines\basket</Filter>
     </ClCompile>
+    <ClCompile Include="ql\instruments\barriers\kikobarrier.cpp" />
+    <ClCompile Include="ql\instruments\barriers\barriers.cpp" />
+    <ClCompile Include="ql\instruments\barriers\kikooptions.cpp" />
   </ItemGroup>
 </Project>
