@@ -4446,6 +4446,8 @@
     <ClInclude Include="ql\instruments\barriers\kikobarrier.h" />
     <ClInclude Include="ql\instruments\barriers\barriers.h" />
     <ClInclude Include="ql\instruments\barriers\kikooptions.h" />
+    <ClInclude Include="ql\pricingengines\barrier\mckikooptionengine.hpp" />
+    <ClInclude Include="ql\pricingengines\barrier\fdmurexkikooptionengine.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ql\methods\montecarlo\brownianbridge.cpp">
@@ -7227,5 +7229,7 @@
     <ClCompile Include="ql\instruments\barriers\kikobarrier.cpp" />
     <ClCompile Include="ql\instruments\barriers\barriers.cpp" />
     <ClCompile Include="ql\instruments\barriers\kikooptions.cpp" />
+    <ClCompile Include="ql\pricingengines\barrier\mckikooptionengine.cpp" />
+    <ClCompile Include="ql\pricingengines\barrier\fdmurexkikooptionengine.cpp" />
   </ItemGroup>
 </Project>
