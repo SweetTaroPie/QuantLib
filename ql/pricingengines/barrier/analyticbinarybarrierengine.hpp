@@ -24,7 +24,7 @@
 #ifndef quantlib_binary_barrier_engine_hpp
 #define quantlib_binary_barrier_engine_hpp
 
-#include <ql/instruments/barrieroption.hpp>
+#include <ql/instruments/barriers/barrieroption.hpp>
 #include <ql/processes/blackscholesprocess.hpp>
 
 namespace QuantLib {

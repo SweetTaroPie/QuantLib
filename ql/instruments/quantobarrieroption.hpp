@@ -25,7 +25,7 @@
 #define quantlib_quanto_barrier_option_hpp
 
 #include <ql/instruments/quantovanillaoption.hpp>
-#include <ql/instruments/barrieroption.hpp>
+#include <ql/instruments/barriers/barrieroption.hpp>
 
 namespace QuantLib {
 

@@ -2406,12 +2406,6 @@
     <ClInclude Include="ql\pricingengines\asian\mcdiscreteasianenginebase.hpp">
       <Filter>pricingengines\asian</Filter>
     </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\all.hpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\analyticbarrierengine.hpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClInclude>
     <ClInclude Include="ql\pricingengines\barrier\mcbarrierengine.hpp">
       <Filter>pricingengines\barrier</Filter>
     </ClInclude>
@@ -3129,12 +3123,6 @@
     <ClInclude Include="ql\experimental\exoticoptions\analyticpdfhestonengine.hpp">
       <Filter>experimental\exoticoptions</Filter>
     </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\binomialbarrierengine.hpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\discretizedbarrieroption.hpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClInclude>
     <ClInclude Include="ql\experimental\exoticoptions\analytictwoassetbarrierengine.hpp">
       <Filter>experimental\exoticoptions</Filter>
     </ClInclude>
@@ -3687,12 +3675,6 @@
     <ClInclude Include="ql\experimental\math\zigguratrng.hpp">
       <Filter>experimental\math</Filter>
     </ClInclude>
-    <ClCompile Include="ql\pricingengines\barrier\analyticbinarybarrierengine.cpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClCompile>
-    <ClCompile Include="ql\pricingengines\barrier\discretizedbarrieroption.cpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClCompile>
     <ClInclude Include="ql\any.hpp" />
     <ClInclude Include="ql\auto_link.hpp" />
     <ClInclude Include="ql\cashflow.hpp" />
@@ -3863,21 +3845,6 @@
     </ClInclude>
     <ClInclude Include="ql\pricingengines\asian\choiasianengine.hpp">
       <Filter>pricingengines\asian</Filter>
-    </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\fdblackscholesbarrierengine.hpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\analyticbinarybarrierengine.hpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\fdblackscholesrebateengine.hpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\fdhestonbarrierengine.hpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\fdhestonrebateengine.hpp">
-      <Filter>pricingengines\barrier</Filter>
     </ClInclude>
     <ClInclude Include="ql\pricingengines\vanilla\fdhestonhullwhitevanillaengine.hpp">
       <Filter>pricingengines\vanilla</Filter>
@@ -4359,15 +4326,6 @@
     <ClInclude Include="ql\models\equity\hestonslvmcmodel.hpp">
       <Filter>models\equity</Filter>
     </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\fdhestondoublebarrierengine.hpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\analyticdoublebarrierbinaryengine.hpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClInclude>
-    <ClInclude Include="ql\pricingengines\barrier\analyticdoublebarrierengine.hpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClInclude>
     <ClInclude Include="ql\instruments\doublebarrieroption.hpp">
       <Filter>instruments</Filter>
     </ClInclude>
@@ -4447,7 +4405,9 @@
     <ClInclude Include="ql\instruments\barriers\barriers.h" />
     <ClInclude Include="ql\instruments\barriers\kikooptions.h" />
     <ClInclude Include="ql\pricingengines\barrier\mckikooptionengine.hpp" />
-    <ClInclude Include="ql\pricingengines\barrier\fdmurexkikooptionengine.hpp" />
+    <ClInclude Include="ql\pricingengines\barrier\fdmurexbarrierengine.hpp" />
+    <ClInclude Include="ql\methods\finitedifferences\stepconditions\fdmdoublebarriersstepcondition.h" />
+    <ClInclude Include="ql\methods\finitedifferences\stepconditions\fdmvanilladoublebarriersstepcondition.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ql\methods\montecarlo\brownianbridge.cpp">
@@ -5722,9 +5682,6 @@
     <ClCompile Include="ql\pricingengines\asian\mc_discr_geom_av_price_heston.cpp">
       <Filter>pricingengines\asian</Filter>
     </ClCompile>
-    <ClCompile Include="ql\pricingengines\barrier\analyticbarrierengine.cpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClCompile>
     <ClCompile Include="ql\pricingengines\barrier\mcbarrierengine.cpp">
       <Filter>pricingengines\barrier</Filter>
     </ClCompile>
@@ -6755,18 +6712,6 @@
     <ClCompile Include="ql\pricingengines\asian\fdblackscholesasianengine.cpp">
       <Filter>pricingengines\asian</Filter>
     </ClCompile>
-    <ClCompile Include="ql\pricingengines\barrier\fdblackscholesbarrierengine.cpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClCompile>
-    <ClCompile Include="ql\pricingengines\barrier\fdblackscholesrebateengine.cpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClCompile>
-    <ClCompile Include="ql\pricingengines\barrier\fdhestonbarrierengine.cpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClCompile>
-    <ClCompile Include="ql\pricingengines\barrier\fdhestonrebateengine.cpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClCompile>
     <ClCompile Include="ql\pricingengines\vanilla\fdhestonhullwhitevanillaengine.cpp">
       <Filter>pricingengines\vanilla</Filter>
     </ClCompile>
@@ -7157,15 +7102,6 @@
     <ClCompile Include="ql\models\equity\hestonslvmcmodel.cpp">
       <Filter>models\equity</Filter>
     </ClCompile>
-    <ClCompile Include="ql\pricingengines\barrier\fdhestondoublebarrierengine.cpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClCompile>
-    <ClCompile Include="ql\pricingengines\barrier\analyticdoublebarrierbinaryengine.cpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClCompile>
-    <ClCompile Include="ql\pricingengines\barrier\analyticdoublebarrierengine.cpp">
-      <Filter>pricingengines\barrier</Filter>
-    </ClCompile>
     <ClCompile Include="ql\instruments\doublebarrieroption.cpp">
       <Filter>instruments</Filter>
     </ClCompile>
@@ -7230,6 +7166,8 @@
     <ClCompile Include="ql\instruments\barriers\barriers.cpp" />
     <ClCompile Include="ql\instruments\barriers\kikooptions.cpp" />
     <ClCompile Include="ql\pricingengines\barrier\mckikooptionengine.cpp" />
-    <ClCompile Include="ql\pricingengines\barrier\fdmurexkikooptionengine.cpp" />
+    <ClCompile Include="ql\pricingengines\barrier\fdmurexbarrierengine.cpp" />
+    <ClCompile Include="ql\methods\finitedifferences\stepconditions\fdmdoublebarriersstepcondition.cpp" />
+    <ClCompile Include="ql\methods\finitedifferences\stepconditions\fdmvanilladoublebarriersstepcondition.cpp" />
   </ItemGroup>
 </Project>

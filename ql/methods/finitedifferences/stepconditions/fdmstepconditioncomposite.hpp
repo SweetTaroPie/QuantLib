@@ -42,9 +42,9 @@ namespace QuantLib {
     
     class FdmStepConditionComposite : public StepCondition<Array> {
     public:
-        typedef std::list<ext::shared_ptr<StepCondition<Array> > > Conditions;
+        typedef std::list<ext::shared_ptr<StepCondition<Array>>> Conditions;
 
-        FdmStepConditionComposite(const std::list<std::vector<Time> >& stoppingTimes,
+        FdmStepConditionComposite(const std::list<std::vector<Time>>& stoppingTimes,
                                   Conditions conditions);
 
         void applyTo(Array& a, Time t) const override;

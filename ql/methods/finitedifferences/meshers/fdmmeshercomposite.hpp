@@ -41,8 +41,10 @@ namespace QuantLib {
         // convenient constructors
         explicit FdmMesherComposite(
             const std::vector<ext::shared_ptr<Fdm1dMesher> > & mesher);
+
         explicit FdmMesherComposite(
             const ext::shared_ptr<Fdm1dMesher>& mesher);
+
         FdmMesherComposite(const ext::shared_ptr<Fdm1dMesher>& m1,
                            const ext::shared_ptr<Fdm1dMesher>& m2);
         FdmMesherComposite(const ext::shared_ptr<Fdm1dMesher>& m1,

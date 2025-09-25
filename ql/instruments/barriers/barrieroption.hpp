@@ -30,6 +30,7 @@
 #include <ql/instruments/barriertype.hpp>
 #include <ql/instruments/payoffs.hpp>
 #include <ql/instruments/dividendschedule.hpp>
+#include <ql/instruments/barriers/barriers.h>
 
 namespace QuantLib {
 
@@ -86,6 +87,7 @@ namespace QuantLib {
         Real barrier;
         Real rebate;
         void validate() const override;
+        ext::shared_ptr<BarrierBase> barrierBase;
     };
 
     //! %Barrier-option %engine base class

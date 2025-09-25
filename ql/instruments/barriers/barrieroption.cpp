@@ -20,7 +20,7 @@
 */
 
 #include <ql/exercise.hpp>
-#include <ql/instruments/barrieroption.hpp>
+#include <ql/instruments/barriers/barrieroption.hpp>
 #include <ql/instruments/impliedvolatility.hpp>
 #include <ql/pricingengines/barrier/analyticbarrierengine.hpp>
 #include <ql/pricingengines/barrier/fdblackscholesbarrierengine.hpp>

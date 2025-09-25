@@ -45,6 +45,8 @@ namespace QuantLib {
                                            allStoppingTimes.end());
     }
 
+
+
     const FdmStepConditionComposite::Conditions&
     FdmStepConditionComposite::conditions() const {
         return conditions_;
