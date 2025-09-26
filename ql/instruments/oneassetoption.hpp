@@ -35,10 +35,18 @@ namespace QuantLib {
       public:
         class engine;
         class results;
-        OneAssetOption(const ext::shared_ptr<Payoff>&,
-                       const ext::shared_ptr<Exercise>&);
+        /*OneAssetOption(const ext::shared_ptr<Payoff>&,
+                       const ext::shared_ptr<Exercise>&);*/
         //! \name Instrument interface
         //@{
+
+        OneAssetOption(
+            const ext::shared_ptr<Payoff>& payoff,
+            const ext::shared_ptr<Exercise>& exercise,
+                       const Date& date = Date()
+        );
+
+
         bool isExpired() const override;
         //@}
         //! \name greeks

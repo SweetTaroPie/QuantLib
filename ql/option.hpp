@@ -25,6 +25,7 @@
 #define quantlib_option_hpp
 
 #include <ql/instrument.hpp>
+#include <ql/exercise.hpp>
 #include <utility>
 
 namespace QuantLib {
@@ -39,15 +40,32 @@ namespace QuantLib {
         enum Type { Put = -1,
                     Call = 1
         };
-        Option(ext::shared_ptr<Payoff> payoff, ext::shared_ptr<Exercise> exercise)
-        : payoff_(std::move(payoff)), exercise_(std::move(exercise)) {}
+        /*Option(ext::shared_ptr<Payoff> payoff, ext::shared_ptr<Exercise> exercise)
+        : payoff_(std::move(payoff)), exercise_(std::move(exercise)) {}*/
+
+        Option(ext::shared_ptr<Payoff> payoff, ext::shared_ptr<Exercise> exercise, 
+            const Date& deliveryDate = Date())
+        : payoff_(std::move(payoff)), exercise_(std::move(exercise))
+        {
+            if (deliveryDate == Date()) {
+                delivery_ = exercise_->lastDate();
+            
+            } else {
+                delivery_ = deliveryDate;
+            }
+        
+        
+        }
+
         void setupArguments(PricingEngine::arguments*) const override;
         ext::shared_ptr<Payoff> payoff() const { return payoff_; }
         ext::shared_ptr<Exercise> exercise() const { return exercise_; }
+
       protected:
         // arguments
         ext::shared_ptr<Payoff> payoff_;
         ext::shared_ptr<Exercise> exercise_;
+        Date delivery_;
     };
 
     /*! \relates Option */
@@ -63,6 +81,7 @@ namespace QuantLib {
         }
         ext::shared_ptr<Payoff> payoff;
         ext::shared_ptr<Exercise> exercise;
+        Date delivery;
     };
 
     //! additional %option results
@@ -95,6 +114,7 @@ namespace QuantLib {
 
         arguments->payoff = payoff_;
         arguments->exercise = exercise_;
+        arguments->delivery = delivery_;
     }
 
     inline std::ostream& operator<<(std::ostream& out, Option::Type type) {

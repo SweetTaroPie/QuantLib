@@ -22,7 +22,7 @@
 #include <ql/exercise.hpp>
 #include <ql/instruments/barriers/barrieroption.hpp>
 #include <ql/instruments/impliedvolatility.hpp>
-#include <ql/pricingengines/barrier/analyticbarrierengine.hpp>
+//#include <ql/pricingengines/barrier/analyticbarrierengine.hpp>
 #include <ql/pricingengines/barrier/fdblackscholesbarrierengine.hpp>
 #include <memory>
 
@@ -37,6 +37,20 @@ namespace QuantLib {
     : OneAssetOption(payoff, exercise),
       barrierType_(barrierType), barrier_(barrier), rebate_(rebate) {}
 
+
+    BarrierOption::BarrierOption(const ext::shared_ptr<BarrierBase>& barrier,
+                                 const ext::shared_ptr<StrikedTypePayoff>& payoff,
+                                 const ext::shared_ptr<Exercise>& exercise,
+                                 const Date& deliveryDate)
+    : OneAssetOption(payoff, exercise, deliveryDate),
+      barrierType_(Barrier::Type(-1)), // 或者合适的默认值
+      barrier_(Null<Real>()), rebate_(Null<Real>()), barrierBase_(barrier)
+    {
+
+    
+    
+    };
+
     void BarrierOption::setupArguments(PricingEngine::arguments* args) const {
 
         OneAssetOption::setupArguments(args);
@@ -46,60 +60,61 @@ namespace QuantLib {
         moreArgs->barrierType = barrierType_;
         moreArgs->barrier = barrier_;
         moreArgs->rebate = rebate_;
+        moreArgs->barrierBase = barrierBase_;
     }
 
 
-    Volatility BarrierOption::impliedVolatility(
-             Real targetValue,
-             const ext::shared_ptr<GeneralizedBlackScholesProcess>& process,
-             Real accuracy,
-             Size maxEvaluations,
-             Volatility minVol,
-             Volatility maxVol) const {
-        return impliedVolatility(targetValue, process, DividendSchedule(),
-                                 accuracy, maxEvaluations, minVol, maxVol);
-    }
+    //Volatility BarrierOption::impliedVolatility(
+    //         Real targetValue,
+    //         const ext::shared_ptr<GeneralizedBlackScholesProcess>& process,
+    //         Real accuracy,
+    //         Size maxEvaluations,
+    //         Volatility minVol,
+    //         Volatility maxVol) const {
+    //    return impliedVolatility(targetValue, process, DividendSchedule(),
+    //                             accuracy, maxEvaluations, minVol, maxVol);
+    //}
 
-    Volatility BarrierOption::impliedVolatility(
-             Real targetValue,
-             const ext::shared_ptr<GeneralizedBlackScholesProcess>& process,
-             const DividendSchedule& dividends,
-             Real accuracy,
-             Size maxEvaluations,
-             Volatility minVol,
-             Volatility maxVol) const {
-        QL_REQUIRE(!isExpired(), "option expired");
+    //Volatility BarrierOption::impliedVolatility(
+    //         Real targetValue,
+    //         const ext::shared_ptr<GeneralizedBlackScholesProcess>& process,
+    //         const DividendSchedule& dividends,
+    //         Real accuracy,
+    //         Size maxEvaluations,
+    //         Volatility minVol,
+    //         Volatility maxVol) const {
+    //    QL_REQUIRE(!isExpired(), "option expired");
 
-        ext::shared_ptr<SimpleQuote> volQuote(new SimpleQuote);
+    //    ext::shared_ptr<SimpleQuote> volQuote(new SimpleQuote);
 
-        ext::shared_ptr<GeneralizedBlackScholesProcess> newProcess =
-            detail::ImpliedVolatilityHelper::clone(process, volQuote);
+    //    ext::shared_ptr<GeneralizedBlackScholesProcess> newProcess =
+    //        detail::ImpliedVolatilityHelper::clone(process, volQuote);
 
-        // engines are built-in for the time being
-        std::unique_ptr<PricingEngine> engine;
-        switch (exercise_->type()) {
-          case Exercise::European:
-            if (dividends.empty())
-                engine = std::make_unique<AnalyticBarrierEngine>(newProcess);
-            else
-                engine = std::make_unique<FdBlackScholesBarrierEngine>(newProcess, dividends);
-            break;
-          case Exercise::American:
-          case Exercise::Bermudan:
-            QL_FAIL("engine not available for non-European barrier option");
-            break;
-          default:
-            QL_FAIL("unknown exercise type");
-        }
+    //    // engines are built-in for the time being
+    //    std::unique_ptr<PricingEngine> engine;
+    //    switch (exercise_->type()) {
+    //      case Exercise::European:
+    //        if (dividends.empty())
+    //            engine = std::make_unique<AnalyticBarrierEngine>(newProcess);
+    //        else
+    //            engine = std::make_unique<FdBlackScholesBarrierEngine>(newProcess, dividends);
+    //        break;
+    //      case Exercise::American:
+    //      case Exercise::Bermudan:
+    //        QL_FAIL("engine not available for non-European barrier option");
+    //        break;
+    //      default:
+    //        QL_FAIL("unknown exercise type");
+    //    }
 
-        return detail::ImpliedVolatilityHelper::calculate(*this,
-                                                          *engine,
-                                                          *volQuote,
-                                                          targetValue,
-                                                          accuracy,
-                                                          maxEvaluations,
-                                                          minVol, maxVol);
-    }
+    //    return detail::ImpliedVolatilityHelper::calculate(*this,
+    //                                                      *engine,
+    //                                                      *volQuote,
+    //                                                      targetValue,
+    //                                                      accuracy,
+    //                                                      maxEvaluations,
+    //                                                      minVol, maxVol);
+    //}
 
 
     BarrierOption::arguments::arguments()

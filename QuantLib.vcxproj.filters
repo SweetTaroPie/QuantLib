@@ -4404,10 +4404,10 @@
     <ClInclude Include="ql\instruments\barriers\kikobarrier.h" />
     <ClInclude Include="ql\instruments\barriers\barriers.h" />
     <ClInclude Include="ql\instruments\barriers\kikooptions.h" />
-    <ClInclude Include="ql\pricingengines\barrier\mckikooptionengine.hpp" />
     <ClInclude Include="ql\pricingengines\barrier\fdmurexbarrierengine.hpp" />
     <ClInclude Include="ql\methods\finitedifferences\stepconditions\fdmdoublebarriersstepcondition.h" />
     <ClInclude Include="ql\methods\finitedifferences\stepconditions\fdmvanilladoublebarriersstepcondition.h" />
+    <ClInclude Include="ql\pricingengines\barrier\mcsimplebarrierengine.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ql\methods\montecarlo\brownianbridge.cpp">
@@ -7165,9 +7165,9 @@
     <ClCompile Include="ql\instruments\barriers\kikobarrier.cpp" />
     <ClCompile Include="ql\instruments\barriers\barriers.cpp" />
     <ClCompile Include="ql\instruments\barriers\kikooptions.cpp" />
-    <ClCompile Include="ql\pricingengines\barrier\mckikooptionengine.cpp" />
     <ClCompile Include="ql\pricingengines\barrier\fdmurexbarrierengine.cpp" />
     <ClCompile Include="ql\methods\finitedifferences\stepconditions\fdmdoublebarriersstepcondition.cpp" />
     <ClCompile Include="ql\methods\finitedifferences\stepconditions\fdmvanilladoublebarriersstepcondition.cpp" />
+    <ClCompile Include="ql\pricingengines\barrier\mcsimplebarrierengine.cpp" />
   </ItemGroup>
 </Project>

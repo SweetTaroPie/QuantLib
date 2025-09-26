@@ -25,10 +25,19 @@
 
 namespace QuantLib {
 
-    OneAssetOption::OneAssetOption(
+    /*OneAssetOption::OneAssetOption(
         const ext::shared_ptr<Payoff>& payoff,
         const ext::shared_ptr<Exercise>& exercise)
-    : Option(payoff, exercise) {}
+    : Option(payoff, exercise) {}*/
+
+    OneAssetOption::OneAssetOption(const ext::shared_ptr<Payoff>& payoff,
+                                   const ext::shared_ptr<Exercise>& exercise,
+                                   const Date& date) 
+        : Option(payoff, exercise, date)
+    {
+
+    };
+
 
     bool OneAssetOption::isExpired() const {
         return detail::simple_event(exercise_->lastDate()).hasOccurred();
